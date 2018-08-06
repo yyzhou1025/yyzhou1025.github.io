@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Zhou&#39;s Personal Blog">
 <meta property="og:description" content="Welcome to my blog :)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-05T22:45:39.259Z">
+<meta property="og:updated_time" content="2018-08-06T17:49:18.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="Welcome to my blog :)">
@@ -266,7 +266,14 @@
       <div class="post-body">
         
         
-          
+          <div class="category-all-page">
+            <div class="category-all-title">
+                2 categories in total
+            </div>
+            <div class="category-all">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hard/">hard</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">2</span></li></ul>
+            </div>
+          </div>
         
       </div>
       
@@ -284,18 +291,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      
-        <div onclick="showGitment()" id="gitment-display-button">Show comments from Gitment</div>
-        <div id="gitment-container" style="display:none"></div>
-      
-    </div>
-
-  
-
-
 
         </div>
         
@@ -346,10 +341,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
-                
+                </a>
               </div>
             
 
@@ -357,10 +352,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">2</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
@@ -594,32 +589,6 @@
 
     
 
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: window.location.pathname, 
-            owner: '',
-            repo: '',
-            
-            oauth: {
-            
-            
-                client_secret: 'f5eeb79d88d5821c40a72922db05f93e5e07ac04',
-            
-                client_id: '9fbe28e1ff80079208e8'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      function showGitment(){
-        document.getElementById("gitment-display-button").style.display = "none";
-        document.getElementById("gitment-container").style.display = "block";
-        renderGitment();
-      }
-      
-      </script>
     
      
      
