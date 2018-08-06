@@ -304,16 +304,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/08/05/My-first-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/05/My-first-blog/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -696,8 +686,8 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     
 <!-- END LOCAL -->
 
@@ -706,12 +696,10 @@
     
       <script type="text/javascript">
       function renderGitment(){
-        var gitment = new Gitmint({
+        var gitment = new Gitment({
             id: window.location.pathname, 
-            owner: 'yyzhou1025',
-            repo: 'yyzhou1025.github.io',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            owner: '',
+            repo: '',
             
             oauth: {
             
@@ -747,8 +735,8 @@
                 document.getElementById("gitment-container").style.display = "block";
                 var gitment = new Gitment({
                         id: window.location.pathname,
-                        owner: '',
-                        repo: '',
+                        owner: 'yyzhou1025',
+                        repo: 'yyzhou1025.github.io',
                         oauth: {
                             client_id: '9fbe28e1ff80079208e8',
                             client_secret: 'f5eeb79d88d5821c40a72922db05f93e5e07ac04',
