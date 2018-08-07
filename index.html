@@ -62,7 +62,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
 
 
 
@@ -354,8 +354,11 @@
       
         
           
-            <h5 id="A-limited-data-structure-and-LIFO"><a href="#A-limited-data-structure-and-LIFO" class="headerlink" title="A limited data structure and LIFO"></a>A limited data structure and LIFO</h5><p>A stack is a container of objects that are inserted or removed according to the last-in first-out (LIFO) principle.</p>
+            <h4 id="A-limited-data-structure-and-LIFO"><a href="#A-limited-data-structure-and-LIFO" class="headerlink" title="A limited data structure and LIFO"></a>A limited data structure and LIFO</h4><p>A stack is a container of objects that are inserted or removed according to the last-in first-out (LIFO) principle.<br>Simply speaking, there are two major operations:<br>  Push: push an item onto the top of the stack<br>  Pop: pop the item from the top of the stack</p>
+<p>A stack is built on top of other data structures. It could be an array, an ArrayList, or a LiknedList. But, the most important thing is that we want a Stack to have the same functionalities no matter what underlying data structure it relies on.</p>
+<p>For what, we need a Stack Interface.</p>
 <p><img src="/2018/08/07/Stack-and-Queue/stackinterface.png" alt=""></p>
+<h5 id="Array-based-implementation"><a href="#Array-based-implementation" class="headerlink" title="Array-based implementation"></a>Array-based implementation</h5><p>We need three fields for this implementation:<br>  An array elements which has a fixed capacity.<br>  Variable top that refers to the top item in the stack.<br>  Constant DEFAULTCAPACITY that refers to the default array length.</p>
 
           
         
@@ -364,6 +367,10 @@
     
     
     
+    
+    <div>
+   
+    </div>
 
     
 
@@ -484,6 +491,10 @@
     
     
     
+    
+    <div>
+   
+    </div>
 
     
 
