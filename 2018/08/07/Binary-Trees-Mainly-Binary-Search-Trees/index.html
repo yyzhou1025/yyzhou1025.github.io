@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DataStructure,Binary Search Tree," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="This is a test blog!I will write my solutions and thoughts for some hard leetcode problems in order to review!Maybe I will write some other projects in the next semester !Welcome to read my blog :)">
+<meta name="description" content="It’s a data structure that has the advantages of both ordered array and linked list. Ordered Array: Search in quick using binary search Linked List: Insert and delete items quickly (in the sense that">
+<meta name="keywords" content="DataStructure,Binary Search Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My first blog">
-<meta property="og:url" content="http://yoursite.com/2018/08/05/My-first-blog/index.html">
+<meta property="og:title" content="Binary Trees(Mainly Binary Search Trees)">
+<meta property="og:url" content="http://yoursite.com/2018/08/07/Binary-Trees-Mainly-Binary-Search-Trees/index.html">
 <meta property="og:site_name" content="Zhou&#39;s Personal Blog">
-<meta property="og:description" content="This is a test blog!I will write my solutions and thoughts for some hard leetcode problems in order to review!Maybe I will write some other projects in the next semester !Welcome to read my blog :)">
+<meta property="og:description" content="It’s a data structure that has the advantages of both ordered array and linked list. Ordered Array: Search in quick using binary search Linked List: Insert and delete items quickly (in the sense that">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-05T20:44:38.432Z">
+<meta property="og:updated_time" content="2018-08-08T03:09:29.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My first blog">
-<meta name="twitter:description" content="This is a test blog!I will write my solutions and thoughts for some hard leetcode problems in order to review!Maybe I will write some other projects in the next semester !Welcome to read my blog :)">
+<meta name="twitter:title" content="Binary Trees(Mainly Binary Search Trees)">
+<meta name="twitter:description" content="It’s a data structure that has the advantages of both ordered array and linked list. Ordered Array: Search in quick using binary search Linked List: Insert and delete items quickly (in the sense that">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/05/My-first-blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/07/Binary-Trees-Mainly-Binary-Search-Trees/"/>
 
 
 
 
 
-  <title>My first blog | Zhou's Personal Blog</title>
+  <title>Binary Trees(Mainly Binary Search Trees) | Zhou's Personal Blog</title>
   
 
 
@@ -261,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/05/My-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/07/Binary-Trees-Mainly-Binary-Search-Trees/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuanyuan Zhou">
@@ -278,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My first blog</h1>
+          <h1 class="post-title" itemprop="name headline">Binary Trees(Mainly Binary Search Trees)</h1>
         
 
         <div class="post-meta">
@@ -290,8 +291,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-05T16:39:00-04:00">
-                2018-08-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-07T20:15:42-04:00">
+                2018-08-07
               </time>
             
 
@@ -300,6 +301,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DataStructure/" itemprop="url" rel="index">
+                    <span itemprop="name">DataStructure</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -328,7 +351,26 @@
       
 
       
-        <p>This is a test blog!<br>I will write my solutions and thoughts for some hard leetcode problems in order to review!<br>Maybe I will write some other projects in the next semester !<br>Welcome to read my blog :)</p>
+        <h2 id="It’s-a-data-structure-that-has-the-advantages-of-both-ordered-array-and-linked-list"><a href="#It’s-a-data-structure-that-has-the-advantages-of-both-ordered-array-and-linked-list" class="headerlink" title="It’s a data structure that has the advantages of both ordered array and linked list."></a>It’s a data structure that has the advantages of both ordered array and linked list.</h2><ul>
+<li>Ordered Array: Search in quick using binary search</li>
+<li>Linked List: Insert and delete items quickly (in the sense that there is no need to shift items)</li>
+</ul>
+<p>Tree Terminology:</p>
+<ul>
+<li>Root: The node at the top of the tree. Only one root in a tree!</li>
+<li>Parent: When any node (except root) has exactly one edge running upward to another node. The node above is called parent of the node.</li>
+<li>Child: Any node may have one or more lines running downward to other nodes. There nodes below the given node called its child.</li>
+<li>Leaf: A node with no child. There can be many leaves in a tree.</li>
+<li>Level(Height): The root is at level 0 and its children are at level 1 and so on.</li>
+</ul>
+<p>##A full binary tree## is a binary tree where each node has exactly zero or two children.</p>
+<p>##A complete binary tree## is a binary tree that is completely filled in reading (from left to right) each row with the possible exception of the bottom level.</p>
+<p>We will mainly talk about binary search tree.</p>
+<p>##The defining characteristic, or the ordering invariantm of the binary search tree:## At any node with a key value, k, in a binary search tree, all keys of the elements in the left sub-tree must be less than k, while all keys of the elements in the right sub-tree must be greater than k. (Meaning no duplicate keys are allowed)</p>
+<p>Fitst, let’s have an interface for BST.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public interface BSTInterface &#123;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * Searches for an element with key in the tree.</span><br><span class="line">     * @param key key value to search</span><br><span class="line">     * @return boolean value indicating success or failure</span><br><span class="line">     */</span><br><span class="line">     boolean find(int key);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Inserts a new element into the tree.</span><br><span class="line">     * @param key key of the element </span><br><span class="line">     * @param value value of the element</span><br><span class="line">     */</span><br><span class="line">     void insert(int key, double value);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Deletes an element from the tree.</span><br><span class="line">     * @param key key of the element to be deleted</span><br><span class="line">     */</span><br><span class="line">     void delete(int key);</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Traverses and prints key and value pairs in the tree.</span><br><span class="line">     */</span><br><span class="line">     void traverse();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>To implement the BST, we need Node class as a private static nested class within the BST class.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">private static class Node &#123;</span><br><span class="line">    private int key;</span><br><span class="line">    private int value;</span><br><span class="line">    private Node left, right;</span><br><span class="line">        </span><br><span class="line">    Node(int k, double v) &#123;</span><br><span class="line">        key = k;</span><br><span class="line">        value = v;</span><br><span class="line">        left = null;</span><br><span class="line">        right = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##Searching for a giving key##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public boolean find(int key) &#123;</span><br><span class="line">    if (root == null) &#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    Node current = root;</span><br><span class="line">    while (current.key != key) &#123;</span><br><span class="line">        if (current.key &lt; key) &#123;</span><br><span class="line">            current = current.right;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            current = current.left;</span><br><span class="line">        &#125;</span><br><span class="line">        if (current == null) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##Inserting a new item##<br><code>`</code><br>public </p>
 
       
     </div>
@@ -355,6 +397,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/DataStructure/" rel="tag"><i class="fa fa-tag"></i> DataStructure</a>
+          
+            <a href="/tags/Binary-Search-Tree/" rel="tag"><i class="fa fa-tag"></i> Binary Search Tree</a>
+          
+        </div>
+      
 
       
       
@@ -364,15 +414,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/07/Binary-Search/" rel="next" title="Binary Search">
+                <i class="fa fa-chevron-left"></i> Binary Search
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/07/Stack-and-Queue/" rel="prev" title="Stack and Queue">
-                Stack and Queue <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -432,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -519,6 +578,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#It’s-a-data-structure-that-has-the-advantages-of-both-ordered-array-and-linked-list"><span class="nav-number">1.</span> <span class="nav-text">It’s a data structure that has the advantages of both ordered array and linked list.</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
