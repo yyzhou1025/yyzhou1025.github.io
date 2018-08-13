@@ -285,6 +285,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/13/Top-K-Frequent-Elements/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuanyuan Zhou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhou's Personal Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/13/Top-K-Frequent-Elements/" itemprop="url">Top K Frequent Elements</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-13T14:12:38-04:00">
+                2018-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Today I want to analyze two medium level LeetCode questions. At first glance, I thought this two questions were simple. However, it took me several hours to really understand. So I write my thoughts here for reviewing afterwards.</p>
+<p>These two questions are similar, both use HashMap and have to sort the elements according to frequency.</p>
+<p>The first question is LeetCode 347 :Top Key Frequency Elements.<br>![] (leetcode347.png);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;Integer&gt; topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        for (int i : nums) &#123;</span><br><span class="line">            map.put(i, map.getOrDefault(i, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;Integer&gt;[] list = new List[nums.length + 1];</span><br><span class="line">        for (int i : map.keySet()) &#123;</span><br><span class="line">            if (list[map.get(i)] == null) &#123;</span><br><span class="line">                list[map.get(i)] = new ArrayList&lt;&gt;();</span><br><span class="line">            &#125;</span><br><span class="line">            list[map.get(i)].add(i);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; answer = new ArrayList&lt;&gt;();</span><br><span class="line">        for (int pos = list.length - 1; pos &gt;= 0 &amp;&amp; answer.size() &lt; k; pos--) &#123;</span><br><span class="line">            if (list[pos] != null) &#123;</span><br><span class="line">                answer.addAll(list[pos]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Analysis: map is used to store different elements in nums, the key of map is different elements in nums, the value is the frequency of each elements. Then, create an array of ArrayList, the length of the array is the largest posible frequency of the each element: nums.length + 1 (if there is only one element in the array repeat many time). The rest of the code is easy to understand.</p>
+<p>The second question is LeetCode 451: Sort Character by Frequency.<br>![] (leetcode451.png);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String frequencySort(String s) &#123;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        for (char i : s.toCharArray()) &#123;</span><br><span class="line">            map.put(i, map.getOrDefault(i, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;Character&gt;[] list = new List[s.length() + 1];</span><br><span class="line">        for (char i : map.keySet()) &#123;</span><br><span class="line">            if(list[map.get(i)] == null) &#123;</span><br><span class="line">                list[map.get(i)] = new ArrayList&lt;&gt;();</span><br><span class="line">            &#125;</span><br><span class="line">            list[map.get(i)].add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        StringBuilder answer = new StringBuilder();</span><br><span class="line">        for (int i = list.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">            if (list[i] != null) &#123;</span><br><span class="line">                for (char k : list[i]) &#123;</span><br><span class="line">                    for (int j = 0; j &lt; map.get(k); j++) &#123;</span><br><span class="line">                        answer.append(k);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return answer.toString();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Analysis: The algorithm of the second question is similiar. </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    
+    <div>
+   
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/07/Binary-Search-Trees/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -968,7 +1120,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -979,7 +1131,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -990,7 +1142,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

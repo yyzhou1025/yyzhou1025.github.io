@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DataStructure,heap,LeetCode," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="AV.initialize(&quot;nJSBPcCjqTgfhjUm9rPdjvlJ-gzGzoHsz&quot;, &quot;xe7VzoKpBEg4DjXpfhJh4FYz&quot;); //需要写上leancloud的key    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqu">
-<meta property="og:type" content="website">
-<meta property="og:title" content="numbers of reading">
-<meta property="og:url" content="http://yoursite.com/numbers-of-reading/index.html">
+<meta name="description" content="Today I want to analyze two medium level LeetCode questions. At first glance, I thought this two questions were simple. However, it took me several hours to really understand. So I write my thoughts h">
+<meta name="keywords" content="DataStructure,heap,LeetCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Top K Frequent Elements">
+<meta property="og:url" content="http://yoursite.com/2018/08/13/Top-K-Frequent-Elements/index.html">
 <meta property="og:site_name" content="Zhou&#39;s Personal Blog">
-<meta property="og:description" content="AV.initialize(&quot;nJSBPcCjqTgfhjUm9rPdjvlJ-gzGzoHsz&quot;, &quot;xe7VzoKpBEg4DjXpfhJh4FYz&quot;); //需要写上leancloud的key    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqu">
+<meta property="og:description" content="Today I want to analyze two medium level LeetCode questions. At first glance, I thought this two questions were simple. However, it took me several hours to really understand. So I write my thoughts h">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-06T15:26:04.370Z">
+<meta property="og:updated_time" content="2018-08-13T18:41:49.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="numbers of reading">
-<meta name="twitter:description" content="AV.initialize(&quot;nJSBPcCjqTgfhjUm9rPdjvlJ-gzGzoHsz&quot;, &quot;xe7VzoKpBEg4DjXpfhJh4FYz&quot;); //需要写上leancloud的key    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqu">
+<meta name="twitter:title" content="Top K Frequent Elements">
+<meta name="twitter:description" content="Today I want to analyze two medium level LeetCode questions. At first glance, I thought this two questions were simple. However, it took me several hours to really understand. So I write my thoughts h">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/numbers-of-reading/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/13/Top-K-Frequent-Elements/"/>
 
 
 
 
 
-  <title>numbers of reading | Zhou's Personal Blog</title>
+  <title>Top K Frequent Elements | Zhou's Personal Blog</title>
   
 
 
@@ -273,57 +274,187 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/13/Top-K-Frequent-Elements/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuanyuan Zhou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhou's Personal Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">numbers of reading</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>AV.initialize("nJSBPcCjqTgfhjUm9rPdjvlJ-gzGzoHsz", "xe7VzoKpBEg4DjXpfhJh4FYz");</script> //需要写上leancloud的key
-<script type="text/javascript">
-  var time=0
-  var title=""
-  var url=""
-  var query = new AV.Query('Counter');//表名
-  query.notEqualTo('id',0); //id不为0的结果
-  query.descending('time'); //结果按阅读次数降序排序
-  query.limit(20);  //最终只返回10条结果
-  query.find().then(function (todo) {
-    for (var i=0;i<10;i++){
-      var result=todo[i].attributes;
-      time=result.time;  //阅读次数
-      title=result.title; //文章标题
-      url=result.url;     //文章url
-      var content="<p>"+"<font color='#0477ab'>"+"【Views:"+time+"】"+"<a href='"+"http://thief.one"+url+"'>"+title+"</font>"+"</a>"+"</p>";
-      // document.write("<a href='"+"http://thief.one/"+url+"'>"+title+"</a>"+"    Readtimes:"+time+"<br>");
-      document.getElementById("heheda").innerHTML+=content
-    }
-  }, function (error) {
-    console.log("error");
-  });
-</script>
-
+          <h1 class="post-title" itemprop="name headline">Top K Frequent Elements</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-13T14:12:38-04:00">
+                2018-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Today I want to analyze two medium level LeetCode questions. At first glance, I thought this two questions were simple. However, it took me several hours to really understand. So I write my thoughts here for reviewing afterwards.</p>
+<p>These two questions are similar, both use HashMap and have to sort the elements according to frequency.</p>
+<p>The first question is LeetCode 347 :Top Key Frequency Elements.<br>![] (leetcode347.png);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;Integer&gt; topKFrequent(int[] nums, int k) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        for (int i : nums) &#123;</span><br><span class="line">            map.put(i, map.getOrDefault(i, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;Integer&gt;[] list = new List[nums.length + 1];</span><br><span class="line">        for (int i : map.keySet()) &#123;</span><br><span class="line">            if (list[map.get(i)] == null) &#123;</span><br><span class="line">                list[map.get(i)] = new ArrayList&lt;&gt;();</span><br><span class="line">            &#125;</span><br><span class="line">            list[map.get(i)].add(i);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; answer = new ArrayList&lt;&gt;();</span><br><span class="line">        for (int pos = list.length - 1; pos &gt;= 0 &amp;&amp; answer.size() &lt; k; pos--) &#123;</span><br><span class="line">            if (list[pos] != null) &#123;</span><br><span class="line">                answer.addAll(list[pos]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return answer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Analysis: map is used to store different elements in nums, the key of map is different elements in nums, the value is the frequency of each elements. Then, create an array of ArrayList, the length of the array is the largest posible frequency of the each element: nums.length + 1 (if there is only one element in the array repeat many time). The rest of the code is easy to understand.</p>
+<p>The second question is LeetCode 451: Sort Character by Frequency.<br>![] (leetcode451.png);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String frequencySort(String s) &#123;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        for (char i : s.toCharArray()) &#123;</span><br><span class="line">            map.put(i, map.getOrDefault(i, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;Character&gt;[] list = new List[s.length() + 1];</span><br><span class="line">        for (char i : map.keySet()) &#123;</span><br><span class="line">            if(list[map.get(i)] == null) &#123;</span><br><span class="line">                list[map.get(i)] = new ArrayList&lt;&gt;();</span><br><span class="line">            &#125;</span><br><span class="line">            list[map.get(i)].add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        StringBuilder answer = new StringBuilder();</span><br><span class="line">        for (int i = list.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">            if (list[i] != null) &#123;</span><br><span class="line">                for (char k : list[i]) &#123;</span><br><span class="line">                    for (int j = 0; j &lt; map.get(k); j++) &#123;</span><br><span class="line">                        answer.append(k);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return answer.toString();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Analysis: The algorithm of the second question is similiar. </p>
+
       
     </div>
     
     
     
+    
+    <div>
+   
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------Ending <i class="fa fa-paw"></i> Thank you for reading-------------</div>
+    
+</div>
+
+   
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DataStructure/" rel="tag"><i class="fa fa-tag"></i> DataStructure</a>
+          
+            <a href="/tags/heap/" rel="tag"><i class="fa fa-tag"></i> heap</a>
+          
+            <a href="/tags/LeetCode/" rel="tag"><i class="fa fa-tag"></i> LeetCode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/07/Binary-Search-Trees/" rel="next" title="Binary Search Trees">
+                <i class="fa fa-chevron-left"></i> Binary Search Trees
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -653,7 +784,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitment({
-            id: '1533567272000', 
+            id: '1534183958000', 
             owner: '',
             repo: '',
             
@@ -690,7 +821,7 @@
                 document.getElementById("gitment-display-button").style.display = "none";
                 document.getElementById("gitment-container").style.display = "block";
                 var gitment = new Gitment({
-                        id: '1533567272000',
+                        id: '1534183958000',
                         owner: 'yyzhou1025',
                         repo: 'yyzhou1025.github.io',
                         oauth: {
