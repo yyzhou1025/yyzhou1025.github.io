@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[How to find a job]]></title>
+    <url>%2F2018%2F08%2F17%2FHow-to-find-a-job%2F</url>
+    <content type="text"><![CDATA[每次刷题总会有刷到一半刷不下去， 觉得自己太渣怎么可能找到工作。想到处找一点精神食粮来鼓励自己，看别人的经验，总要看到这些打了鸡血的文章才有继续刷下去的动力。所以我决定把这些文章都收集在这里，作为我精神粮仓吧！其实看到这些标题真的很像鸡汤啊，但对我来说就是有用。不得不说，信念很重要，我相信我可以做到的事情就一定可以做到。 如何开始找工作 我的弱b记录 三个月刷题拿到Google offer 8个月从cs菜鸟到拿到Google offer的经验 + 内推]]></content>
+      <categories>
+        <category>Interview</category>
+      </categories>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Count Complete Tree Nodes]]></title>
     <url>%2F2018%2F08%2F15%2FCount-Complete-Tree-Nodes%2F</url>
     <content type="text"><![CDATA[We need to count the nodes of a complete binary tree, first of all, let’s clarify the defination of three kinds of binary tree: complete binary tree, prefect binary tree and full binary tree. Complete Binary Tree In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes at the last level h. An alternative defination is a prefect tree whose rightmost leaves have been removed. Prefect Binary Tree A perfect binary tree is a binary tree in which all interior nodes have two children and all leaves have the same depth or same level. Full Binary Tree A Full Binary Tree (FBT) is a tree in which every node other than the leaves has two children. The nature of binary tree If the level begins from 0, them level i has at most 2^i nodes. If the hight of a binary tree is k, then the tree has at most 2^(k + 1) - 1 nodes (k &gt;= -1). So according to the defination above, a prefect binary tree must be a complete binary tree, but a complete binary tree may not be a prefect binary tree. So the complete binary tree in the question maybe a prefect binary tree. If it’s a prefect binary tree, then the number of nodes is 2^(k + 1) - 1 (k is the level of the tree). We can write recursive code to slove this question. Find the right and left subtree’s height: leftDep and rightDep. If leftDep is equal to rightDep, the it’s a prefect binary tree; else we the sum of the nodes is 1 + the nodes of right subtree + the nodes of left subtree. The code is below:1234567891011121314151617181920212223242526272829303132333435363738/** * Definition for a binary tree node. * public class TreeNode &#123; * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) &#123; val = x; &#125; * &#125; */class Solution &#123; public int countNodes(TreeNode root) &#123; if (root == null) return 0; int leftDep = leftDepth(root); int rightDep = rightDepth(root); if (leftDep == rightDep) return (1 &lt;&lt; leftDep) - 1; else return 1 + countNodes(root.left) + countNodes(root.right); &#125; private int leftDepth(TreeNode root) &#123; int dep = 0; while (root != null) &#123; root = root.left; dep++; &#125; return dep; &#125; private int rightDepth(TreeNode root) &#123; int dep = 0; while (root != null) &#123; root = root.right; dep++; &#125; return dep; &#125;&#125; At the first time, I try to use depth first search, but it failed because time limited exception…]]></content>
@@ -9,8 +20,8 @@
         <category>LeetCode</category>
       </categories>
       <tags>
-        <tag>LeetCode</tag>
         <tag>DataStracture</tag>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
