@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[haha]]></title>
+    <url>%2F2018%2F08%2F21%2Fhaha%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Life is never easy]]></title>
     <url>%2F2018%2F08%2F20%2FLife-is-never-easy%2F</url>
     <content type="text"><![CDATA[人生来就是受苦的 我第一次讲出这句话的时候大概读小学，也是没想到我这么小就可以说出这么有哲理的话。只是当时也就是随口一说，现在才算是深有体会。 好不容易考完GRE, 托福，来了美国，又要经历与家人分离的苦，转专业课程跟不上的苦，刷题找工作的苦，语言不通的苦(特别是面试还很大几率碰到阿三)… 总有一天，我会苦尽甘来。等到那时再看现在这些也就不算什么了吧]]></content>
@@ -44,8 +49,8 @@
         <category>LeetCode</category>
       </categories>
       <tags>
-        <tag>DataStracture</tag>
         <tag>LeetCode</tag>
+        <tag>DataStracture</tag>
       </tags>
   </entry>
   <entry>
@@ -72,8 +77,8 @@
       </categories>
       <tags>
         <tag>DataStructure</tag>
-        <tag>LeetCode</tag>
         <tag>Binary Search</tag>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
