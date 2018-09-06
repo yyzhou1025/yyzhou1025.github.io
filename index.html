@@ -295,6 +295,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/Eclipse-for-Java-J2EE-and-JDK/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuanyuan Zhou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhou's Personal Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/05/Eclipse-for-Java-J2EE-and-JDK/" itemprop="url">Eclipse for Java/J2EE and JDK</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-05T22:09:10-04:00">
+                2018-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/JDK/" itemprop="url" rel="index">
+                    <span itemprop="name">JDK</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Homeworks for 95771 require us to write code in Netbeans. Seriously? The interface of Netbeans is so urgy. Why can’t we use Eclipse or IntelliJ ??? Fine, for a better grade, I decided to use Netbeans for this course. Below is the troubles and solutions about change JDK version for Eclipse(J2EE/Java).</p>
+<p>Firstly, I downloaded Netbeans 8.2 for official website, but there was no response when I clicked “new project”. Google said that Netbeans can’t support JDK 9/10, only support for JDK 8. So I delete JDK 9/10 in my computer. Here is the way to remove JDK 9/10 :<br><img src="/2018/09/05/Eclipse-for-Java-J2EE-and-JDK/removeJDK.png" alt=""></p>
+<p><strong>Don’t forget to change the JDK version to your own specific version !</strong> </p>
+<p>When I successfully uninstalled JDK 9/10 and installed JDK 8, I found my Eclipse for Java and for J2EE didn’t work because of JDK version comfliction(maybe). So I serched many solutions to slove this problem. I will write them down which are work for me in case I meet same question next time.</p>
+<h4 id="Eclipse-for-Java"><a href="#Eclipse-for-Java" class="headerlink" title="Eclipse for Java"></a>Eclipse for Java</h4><ol>
+<li>Right click the project and go into properties.</li>
+<li>Go to Java Compiler and change the Compiler compliance level to 1.8, clikc Apply and Apply and close.</li>
+<li>Go to Java Build Path, delete JDK version which you have delted. Then click Add Library -&gt; JRE System Library -&gt; Workspace default JRE(Java SE 8[1.8.0 181])-&gt; Finish</li>
+</ol>
+<p>In this process, I forgot to do the step 2, so when I run the project, there is a error:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A JNI error has occurred, please check your installation and try again</span><br></pre></td></tr></table></figure></p>
+<h4 id="Eclipse-for-J2EE"><a href="#Eclipse-for-J2EE" class="headerlink" title="Eclipse for J2EE"></a>Eclipse for J2EE</h4><ol>
+<li>The 3 steps are similiar above.</li>
+<li>You should go to the properties of the project and change the java version to 1.8. Then you are done!</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    
+    <div>
+   
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/20/刷题小感悟/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1780,133 +1950,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/05/My-first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuanyuan Zhou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/icon.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhou's Personal Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/05/My-first-blog/" itemprop="url">My first blog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-05T16:39:00-04:00">
-                2018-08-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>This is a test blog!<br>I will write my solutions and thoughts for some hard leetcode problems in order to review!<br>Maybe I will write some other projects in the next semester !<br>Welcome to read my blog :)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-    
-    <div>
-   
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1954,7 +2004,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1965,7 +2015,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1976,7 +2026,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
