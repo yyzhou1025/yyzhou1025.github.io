@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[EGit Tutorial]]></title>
+    <url>%2F2018%2F09%2F08%2FEGit-Tutorial%2F</url>
+    <content type="text"><![CDATA[I am so excited today because I found EGit! EGit is a Git integration for Eclipse IDE, which can commit and push your project to GitHub immediately just in Eclipse. I think it’s so convenient, I can synchronize my project to GitHub immediately when I change it. So I am gonna to write down some tips for using EGit. The detailed EGit Tutorial is here ####Install EGit in Eclipse####First of all, you need to install EGit in Eclipse. Go to help -&gt; Install New Software Insert http://download.eclipse.org/egit/updates after Work with, then click add. It will promp out a window force you to input name, you can simply input EGit. Select Git integration for Eclipse and click next and finish. It will restart Eclipse. Go to preference and click into Git -&gt; Configuration. Click Add Entry…, you should input two pairs of key and value. For the first pair, you can input “user.name” for key and your github name for value(e.g. for me, it’s yyzhou1025). For the seconf pair, you can input “user.email” for key and your github email for value(e.g. for me, it’s yyzhou1025@gmail.com). Right click the project and choose Team -&gt; Share Project.. Create an empty repo at anywhere you want, and click finish. Right click the project and choose Team -&gt; Add to Index. Create a repo on your GitHub and now you can commit your project to GitHUb!]]></content>
+      <categories>
+        <category>Java</category>
+        <category>EGit</category>
+      </categories>
+      <tags>
+        <tag>Eclipse</tag>
+        <tag>EGit</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Eclipse for Java/J2EE and JDK]]></title>
     <url>%2F2018%2F09%2F05%2FEclipse-for-Java-J2EE-and-JDK%2F</url>
     <content type="text"><![CDATA[Homeworks for 95771 require us to write code in Netbeans. Seriously? The interface of Netbeans is so urgy. Why can’t we use Eclipse or IntelliJ ??? Fine, for a better grade, I decided to use Netbeans for this course. Below is the troubles and solutions about change JDK version for Eclipse(J2EE/Java). Firstly, I downloaded Netbeans 8.2 for official website, but there was no response when I clicked “new project”. Google said that Netbeans can’t support JDK 9/10, only support for JDK 8. So I delete JDK 9/10 in my computer. Here is the way to remove JDK 9/10 : 123sudo rm -fr /Library/Java/JavaVirtualMachines/jdk-9.jdk/sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.pluginsudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane Don’t forget to change the JDK version to your own specific version ! 1cd /Library/Java/JavaVirtualMachines/ When I successfully uninstalled JDK 9/10 and installed JDK 8, I found my Eclipse for Java and for J2EE didn’t work because of JDK version comfliction(maybe). So I serched many solutions to slove this problem. I will write them down which are work for me in case I meet same question next time. Eclipse for Java Right click the project and go into properties. Go to Java Compiler and change the Compiler compliance level to 1.8, clikc Apply and Apply and close. Go to Java Build Path, delete JDK version which you have delted. Then click Add Library -&gt; JRE System Library -&gt; Workspace default JRE(Java SE 8[1.8.0 181])-&gt; Finish In this process, I forgot to do the step 2, so when I run the project, there is a error:1A JNI error has occurred, please check your installation and try again Eclipse for J2EE The 3 steps are similiar above. You should go to the properties of the project and change the java version to 1.8. Then you are done!]]></content>
@@ -9,12 +22,12 @@
         <category>JDK</category>
       </categories>
       <tags>
+        <tag>Eclipse</tag>
         <tag>Java</tag>
         <tag>Servlet</tag>
         <tag>J2EE</tag>
         <tag>JDK</tag>
         <tag>NetBeans</tag>
-        <tag>Eclipse</tag>
       </tags>
   </entry>
   <entry>
@@ -77,8 +90,8 @@
       </categories>
       <tags>
         <tag>DataStructure</tag>
-        <tag>Binary Search</tag>
         <tag>LeetCode</tag>
+        <tag>Binary Search</tag>
       </tags>
   </entry>
   <entry>
